@@ -2,6 +2,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "context.hpp"
+
 #define VOLK_IMPLEMENTATION
 #include <vulkan/vulkan.h>
 #include <volk/volk.h>
@@ -109,6 +111,9 @@ static inline void chk(bool result) {
 
 int main(int argc, char* argv[])
 {
+	ralkan::Context context{};
+	return EXIT_SUCCESS;
+	
 	chk(SDL_Init(SDL_INIT_VIDEO));
 	chk(SDL_Vulkan_LoadLibrary(NULL));
 	volkInitialize();
